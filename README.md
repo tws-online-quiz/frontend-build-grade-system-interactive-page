@@ -14,6 +14,7 @@
 - 基于新需求，重构既有代码
 - HTML的基本使用
 - CSS（基于Bootstrap）的基本使用
+- Javascript操作DOM
 
 ### 要求:
 
