@@ -9,14 +9,7 @@
 - 修改一条学生成绩信息
 - 删除一条学生成绩信息
 
-## 挑战:
 
-- 基于新需求，重构既有代码
-- 运用HTML表单标签接收用户输入
-- 运用CSS调整页面样式
-- 运用Javascript DOM API修改页面行动
-
-### 要求:
 
 1. 实现一个静态页面展示学生成绩信息。
 
@@ -58,6 +51,18 @@
 
 - 允许用户在查询出学生成绩后进行删除
 - 删除时弹窗确认`确定删除”姓名+学号“的成绩？`
+
+## 挑战:
+
+1. 基于新需求，重构既有代码
+2. 运用HTML表单标签接收用户输入
+3. 运用CSS调整页面样式
+4. 运用Javascript DOM API修改页面行动
+
+## 要求:
+
+1. 使用Javascript监听表单[onSubmit](http://www.w3school.com.cn/jsref/event_onsubmit.asp)事件
+2. 将学生成绩存入浏览器的[localStorage](http://www.w3school.com.cn/html5/html_5_webstorage.asp)
 
 ## 学习资源:
 
