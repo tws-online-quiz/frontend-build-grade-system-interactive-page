@@ -5,9 +5,30 @@
     <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="./jquery-3.2.1.js"></script>
     <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./lib/roundAtMost1Decimal.js"></script>
+    <script src="./lib/studentsDB.js"></script>
+    <script src="./lib/student.js"></script>
+    <script src="./addStudent.js"></script>
+    <script type="text/javascript">
+        let studentsDB = new StudentsDB();
+        document.addEventListener("DOMContentLoaded",function () {
+            document.getElementById("add-student").addEventListener("submit",function(event) {
+                event.preventDefault();
+                let studentString = $('#student-string').val();
+                addStudent(studentString);
+                return false;
+            });
+        });
+    </script>
 </head>
 <body>
 <!--write your code here-->
+<p>请输入学生信息（格式：姓名, 学号, 民族, 班级, 学科: 成绩, ...），按Submit提交：</p>
+<form id="add-student">
+    <input id="student-string" type="text">
+    <input type="submit" value="Submit">
+</form>
+<p id="message"></p>
 
 </body>
 </html>
