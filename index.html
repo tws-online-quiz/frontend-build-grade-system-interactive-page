@@ -15,7 +15,9 @@
                 document.getElementById("search").addEventListener("submit",function(event) {
                     event.preventDefault();
                     let queryString = $("#query-string").val();
-                    displayStudentScores(searchStudents(queryString));
+                    if (queryString.length > 0){
+                        displayStudentScores(searchStudents(queryString));
+                    }
                     return false;
                 });
                 displayAllStudentScores();
@@ -37,6 +39,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2>成绩单</h2>
+                    <p>请输入学生信息（格式：姓名, 学号, 民族, 班级, 学科: 成绩, ...），按Submit提交：</p>
                     <form id="search">
                         <div class="input-group">
                             <input id="query-string" class="form-control" type="text">
@@ -45,6 +48,7 @@
                             </span>
                         </div>
                     </form>
+                    <p id="message"></p>
                     <div id="student-scores-report"></div>
                 </div>
             </div>

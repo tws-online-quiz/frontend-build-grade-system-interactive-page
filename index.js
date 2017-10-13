@@ -10,7 +10,7 @@ function displayStudentScores(students) {
                             <th>平均分</th>
                             <th>总分</th>
                         </tr>
-                        ${ students ?
+                        ${ (students.length > 0) ?
         students.map((student) => {
             return `<tr>
                                 <td>${student.name}</td><td>${student.mathScore}</td><td>${student.mandarinScore}</td><td>${student.englishScore}</td><td>${student.programmingScore}</td><td>${roundAtMost1Decimal(Student.averageScore(student))}</td><td>${roundAtMost1Decimal(Student.totalScore(student))}</td>
@@ -30,6 +30,12 @@ function displayAllStudentScores() {
 }
 
 function searchStudents(queryString) {
-    return studentsDB.filter(queryString);
+    if(Student.validateQueryString(queryString)){
+        $('#message').html('');
+        return studentsDB.filter(queryString);
+    } else {
+        $('#message').html('<span style="color: red;">请按正确的格式输入要打印的学生的学号（格式： 学号, 学号,...），按Search提交：</span>');
+        return [];
+    }
 }
 
