@@ -15,7 +15,7 @@ function displayStudentScores(students) {
             return `<tr>
                                 <td>${student.name}</td><td>${student.mathScore}</td><td>${student.mandarinScore}</td><td>${student.englishScore}</td><td>${student.programmingScore}</td><td>${roundAtMost1Decimal(Student.averageScore(student))}</td><td>${roundAtMost1Decimal(Student.totalScore(student))}</td>
                             </tr>`;
-        }).join('') : `<tr><td>No student is found.</td></tr>`
+        }).join('') : `<tr><td>学生不存在。</td></tr>`
         }
                      </table>
                      <p>全班总分平均数：${roundAtMost1Decimal(Student.averageOfTotalScoreSum(students))}</p>
