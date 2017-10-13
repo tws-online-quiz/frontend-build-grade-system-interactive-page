@@ -3,6 +3,7 @@ function displayStudentScores(students) {
                     <table class="table">
                         <tr>
                             <th>姓名</th>
+                            <th>学号</th>
                             <th>数学</th>
                             <th>语文</th>
                             <th>英语</th>
@@ -13,7 +14,7 @@ function displayStudentScores(students) {
                         ${ (students.length > 0) ?
         students.map((student) => {
             return `<tr>
-                                <td>${student.name}</td><td>${student.mathScore}</td><td>${student.mandarinScore}</td><td>${student.englishScore}</td><td>${student.programmingScore}</td><td>${roundAtMost1Decimal(Student.averageScore(student))}</td><td>${roundAtMost1Decimal(Student.totalScore(student))}</td>
+                                <td>${student.name}</td><td>${student.studentNum}</td><td>${student.mathScore}</td><td>${student.mandarinScore}</td><td>${student.englishScore}</td><td>${student.programmingScore}</td><td>${roundAtMost1Decimal(Student.averageScore(student))}</td><td>${roundAtMost1Decimal(Student.totalScore(student))}</td>
                             </tr>`;
         }).join('') : `<tr><td>学生不存在。</td></tr>`
         }
