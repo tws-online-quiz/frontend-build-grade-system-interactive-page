@@ -14,10 +14,18 @@
             document.addEventListener("DOMContentLoaded",function () {
                 document.getElementById("query-button").addEventListener("click",function(event) {
                     event.preventDefault();
+                    let queryString = $("#query-string").val();
+                    displayStudentScores(searchStudents(queryString));
+                    return false;
+                });
+
+                document.getElementById("add-button").addEventListener("click",function(event) {
+                    event.preventDefault();
                     addStudent();
                     displayAllStudentScores();
                     return false;
                 });
+
                 displayAllStudentScores();
             });
         </script>
@@ -25,7 +33,11 @@
     <body>
         <!--write your code here-->
         <p>成绩单</p>
-        <input id="query-button" type="button" value="mybutton">
+        <input id="add-button" type="button" value="addStudent">
+        <div>
+            <input id="query-string" type="text">
+            <input id="query-button" type="button" value="Search">
+        </div>
         <div id="student-scores-report"></div>
     </body>
 </html>

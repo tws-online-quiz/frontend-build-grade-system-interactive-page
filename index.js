@@ -3,8 +3,7 @@ function addStudent() {
     studentsDB.save(newStudent);
 }
 
-function displayAllStudentScores() {
-    let students = studentsDB.all();
+function displayStudentScores(students) {
     let studentScoresViewTemplate = `
                     <table class="table">
                         <tr>
@@ -28,5 +27,14 @@ function displayAllStudentScores() {
                      <p>全班总分中位数：${roundAtMost1Decimal(Student.medianOfTotalScoreSum(students))}</p>
                 `;
     $('#student-scores-report').html(studentScoresViewTemplate);
+}
+
+function displayAllStudentScores() {
+    let students = studentsDB.all();
+    displayStudentScores(students);
+}
+
+function searchStudents(queryString) {
+    return studentsDB.filter(queryString);
 }
 
