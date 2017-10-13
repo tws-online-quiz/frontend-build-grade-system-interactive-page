@@ -17,6 +17,8 @@
                     let queryString = $("#query-string").val();
                     if (queryString.length > 0){
                         displayStudentScores(searchStudents(queryString));
+                    } else {
+                        displayAllStudentScores();
                     }
                     return false;
                 });
