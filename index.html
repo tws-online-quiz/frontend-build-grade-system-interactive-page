@@ -23,12 +23,31 @@
         </script>
     </head>
     <body>
-        <!--write your code here-->
-        <p>成绩单</p>
-        <form id="search">
-            <input id="query-string" type="text">
-            <input type="submit" value="Search">
-        </form>
-        <div id="student-scores-report"></div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./add-student.html">添加学生</a></li>
+                        <li class="active"><a href="./index.html">成绩单</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>成绩单</h2>
+                    <form id="search">
+                        <div class="input-group">
+                            <input id="query-string" class="form-control" type="text">
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-default" value="Search">
+                            </span>
+                        </div>
+                    </form>
+                    <div id="student-scores-report"></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -22,13 +22,32 @@
     </script>
 </head>
 <body>
-<!--write your code here-->
-<p>请输入学生信息（格式：姓名, 学号, 民族, 班级, 学科: 成绩, ...），按Submit提交：</p>
-<form id="add-student">
-    <input id="student-string" type="text">
-    <input type="submit" value="Submit">
-</form>
-<p id="message"></p>
-
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./add-student.html">添加学生</a></li>
+                    <li><a href="./index.html">成绩单</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>添加学生</h2>
+                <p>请输入学生信息（格式：姓名, 学号, 民族, 班级, 学科: 成绩, ...），按Submit提交：</p>
+                <form id="add-student">
+                    <div class="input-group">
+                        <input id="student-string" class="form-control" type="text">
+                        <span class="input-group-btn">
+                            <input type="submit" class="btn btn-default" value="Submit">
+                        </span>
+                    </div>
+                </form>
+                <p id="message"></p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
