@@ -1,8 +1,3 @@
-function addStudent() {
-    let newStudent = new Student("name", "123", "汉", "1", "语文", "1", "数学", "1", "英语", "1", "编程", "1");
-    studentsDB.save(newStudent);
-}
-
 function displayStudentScores(students) {
     let studentScoresViewTemplate = `
                     <table class="table">
